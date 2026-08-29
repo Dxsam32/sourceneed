@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# sourceneed.com — rebuild
 
-## Getting Started
+B2B marketplace for surplus and stocked chemicals in North America, operated by
+Farachem Solutions Inc. (Toronto). Next.js 14 (App Router) + TypeScript +
+Tailwind CSS, deployed on Vercel, product data in Supabase Postgres.
 
-First, run the development server:
+## Architecture
+
+Catalog + lead-gen first, transactions later.
+
+- **Product data**: the `sourceneed_products` table in Supabase. When
+  `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` are unset (or
+  the table is unreachable), the site falls back to the committed seed file
+  `src/data/products.json`, so it always builds and renders. Pages are
+  statically generated and revalidate hourly.
+- **Blog**: 5 seed articles in `src/lib/blog.ts` (no CMS needed yet).
+- **Forms**: contact/register compose pre-filled emails in the visitor's own
+  mail client (`mailto:`) — zero backend, zero personal data stored, matching
+  the launch-phase "accounts are set up personally" positioning. Swap for a
+  real backend when self-serve accounts ship.
+- **Redirects**: every legacy WordPress URL 301s via
+  `redirects/legacy-redirects.mjs` (loaded by `next.config.mjs`). The map was
+  inventoried from the old site's `wp-sitemap.xml` on 2026-08-29.
+
+## Environment variables (Vercel → Project Settings)
+
+| Variable | Purpose |
+|---|---|
+| `NEXT_PUBLIC_SUPABASE_URL` | Supabase project URL |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Publishable (anon) key — table has public read RLS |
+
+## Commands
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev          # local dev
+npm run build        # production build
+npm run check-links  # crawl a running instance; fails on broken links,
+                     # href="#" anchors, or external-domain leaks
+node scripts/seed-supabase.mjs  # push products.json to Supabase
+                                # (needs SUPABASE_URL + SUPABASE_SERVICE_ROLE_KEY)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content notes for launch
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Demo listings**: the three Farachem lots (Farahyal HAC-XS, Celus-Bi Feel
+  10/2, Vitamin K1) carry over from the old site. The other 21 listings are
+  realistic seed data — replace supplier names/lots with real inventory before
+  marketing the catalog.
+- **Testimonials**: placeholder slots render on the homepage and are clearly
+  labelled. Only publish testimonials with full name, title, and company.
+- **SDS/COA downloads**: buttons fall back to "request a copy" mailto links
+  until `sds_url` / `coa_url` are populated on a product row, at which point
+  they become direct downloads automatically.
+- **DNS cutover**: point sourceneed.com at Vercel; all legacy URLs 301 to
+  their new equivalents.
