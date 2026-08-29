@@ -12,6 +12,7 @@ const config: Config = {
         cobalt: "#1D3FC4",
         "cobalt-deep": "#152E92",
         amber: "#DE9308",
+        "amber-deep": "#7A5200",
         "amber-soft": "#FBF1DC",
         line: "#D9D5C9",
         "line-dark": "#B9B4A5",

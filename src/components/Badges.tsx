@@ -12,7 +12,7 @@ export function DocBadge({
       title={title}
       className={`inline-flex items-center gap-1 border px-1.5 py-0.5 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.1em] ${
         available
-          ? "border-amber/50 bg-amber-soft text-amber"
+          ? "border-amber/50 bg-amber-soft text-amber-deep"
           : "border-line text-line-dark"
       }`}
     >

@@ -277,7 +277,7 @@ export default async function HomePage() {
           <div className="mt-8 grid gap-px overflow-hidden border border-dashed border-line-dark bg-line md:grid-cols-2">
             {[1, 2].map((i) => (
               <div key={i} className="bg-paper p-6">
-                <p className="font-mono text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-amber">
+                <p className="font-mono text-[0.6875rem] font-semibold uppercase tracking-[0.14em] text-amber-deep">
                   Testimonial slot — awaiting verified customer
                 </p>
                 <p className="mt-3 text-sm leading-6 text-ink-soft">
