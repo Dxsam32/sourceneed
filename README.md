@@ -56,7 +56,7 @@ node scripts/seed-supabase.mjs  # push products.json to Supabase
 
 ## Deployment state (2026-08-29)
 
-Live at **https://sourceneed-prod.vercel.app** (project `sourceneed-prod`,
+Live at **https://sourceneed-v2.vercel.app** (project `sourceneed-v2`,
 team dxsam32s-projects). Because the Vercel MCP connector could only create
 projects (not redeploy them), the project's build command fetches the source
 tarball from GitHub master:
@@ -71,6 +71,6 @@ curl -sL https://github.com/Dxsam32/sourceneed/archive/refs/heads/master.tar.gz 
    Settings → Git, and clear the custom build command — then every push
    deploys normally and the repo can go private again.
 2. Delete the dead partial projects: `sourceneed`, `sourceneed-site`,
-   `sourceneed-web`, `sourceneed-live`, `sourceneed-app`.
+   `sourceneed-web`, `sourceneed-live`, `sourceneed-app`, `sourceneed-prod`.
 3. Add the env vars above so the catalog reads from Supabase.
 4. Add the `sourceneed.com` domain when ready to cut over DNS.
