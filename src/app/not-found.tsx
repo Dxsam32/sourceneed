@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div className="shell flex flex-col items-center py-24 text-center">
       <p className="label-mono">Error 404</p>
-      <h1 className="mt-3 font-display text-3xl font-black tracking-tight sm:text-4xl">
+      <h1 className="mt-3 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
         That page isn&apos;t on the manifest.
       </h1>
       <p className="mt-3 max-w-md text-[0.95rem] leading-7 text-ink-soft">

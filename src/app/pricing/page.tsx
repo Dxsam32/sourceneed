@@ -55,8 +55,7 @@ export default function PricingPage() {
     <>
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-14">
-          <p className="label-mono">Pricing</p>
-          <h1 className="mt-2 max-w-2xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             You pay when material moves. Not before.
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-ink-soft">
@@ -78,13 +77,13 @@ export default function PricingPage() {
                 }`}
               >
                 {t.highlight && (
-                  <span className="mb-3 self-start bg-cobalt px-2 py-1 font-mono text-[0.625rem] font-semibold uppercase tracking-[0.14em] text-paper">
+                  <span className="mb-3 self-start bg-cobalt px-2 py-1 text-[0.625rem] font-semibold text-paper">
                     Most common
                   </span>
                 )}
                 <h2 className="font-display text-lg font-bold">{t.name}</h2>
-                <p className="mt-2 font-display text-3xl font-black">{t.price}</p>
-                <p className="mt-1 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+                <p className="mt-2 font-display text-3xl font-extrabold">{t.price}</p>
+                <p className="mt-1 text-[0.6875rem] text-ink-soft">
                   {t.detail}
                 </p>
                 <ul className="mt-5 flex-1 space-y-2.5">

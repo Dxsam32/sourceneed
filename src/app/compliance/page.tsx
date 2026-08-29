@@ -40,8 +40,7 @@ export default function CompliancePage() {
     <>
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-14">
-          <p className="label-mono">Compliance</p>
-          <h1 className="mt-2 max-w-2xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             Chemicals are regulated. Our marketplace acts like it.
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-ink-soft">
@@ -68,13 +67,13 @@ export default function CompliancePage() {
       <section aria-labelledby="checklist-heading" className="border-b border-line">
         <div className="shell grid gap-10 py-14 lg:grid-cols-2">
           <div>
-            <h2 id="checklist-heading" className="font-display text-2xl font-black tracking-tight">
+            <h2 id="checklist-heading" className="font-display text-2xl font-extrabold tracking-tight">
               The buyer&apos;s five-point document check
             </h2>
             <ol className="mt-6 space-y-3">
               {buyerChecks.map((c, i) => (
                 <li key={c} className="flex gap-3 text-[0.95rem] leading-7 text-ink-soft">
-                  <span className="mt-0.5 font-mono text-xs font-semibold text-cobalt">
+                  <span className="mt-0.5 text-xs font-semibold text-cobalt">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   {c}
@@ -108,7 +107,7 @@ export default function CompliancePage() {
 
       <section className="bg-ink text-paper">
         <div className="shell flex flex-col items-start gap-6 py-14 lg:flex-row lg:items-center lg:justify-between">
-          <h2 className="font-display text-2xl font-black tracking-tight">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight">
             Questions about a specific material or shipment?
           </h2>
           <Link href="/contact" className="btn-secondary !border-paper !text-paper hover:!bg-paper hover:!text-ink">

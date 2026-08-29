@@ -22,7 +22,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={`font-mono text-xs font-medium uppercase tracking-[0.12em] transition-colors hover:text-cobalt ${
+              className={`text-sm font-medium transition-colors hover:text-cobalt ${
                 pathname.startsWith(item.href) ? "text-cobalt" : "text-ink-soft"
               }`}
             >
@@ -34,7 +34,7 @@ export default function Header() {
         <div className="hidden items-center gap-3 lg:flex">
           <Link
             href="/login"
-            className="font-mono text-xs font-medium uppercase tracking-[0.12em] text-ink-soft transition-colors hover:text-cobalt"
+            className="text-sm font-medium text-ink-soft transition-colors hover:text-cobalt"
           >
             Login
           </Link>
@@ -73,7 +73,7 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-line py-3 font-mono text-xs font-medium uppercase tracking-[0.12em] text-ink-soft last:border-0"
+                className="border-b border-line py-3 text-sm font-medium text-ink-soft last:border-0"
               >
                 {item.label}
               </Link>

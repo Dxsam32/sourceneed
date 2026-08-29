@@ -13,8 +13,7 @@ export default function LoginPage() {
   return (
     <div className="shell flex justify-center py-20">
       <div className="w-full max-w-md border-2 border-ink bg-paper p-8">
-        <p className="label-mono">Login</p>
-        <h1 className="mt-2 font-display text-2xl font-black tracking-tight">
+        <h1 className="mt-2 font-display text-2xl font-extrabold tracking-tight">
           Self-serve login is on its way.
         </h1>
         <p className="mt-3 text-sm leading-6 text-ink-soft">
@@ -31,7 +30,7 @@ export default function LoginPage() {
             Don&apos;t have an account? Register
           </Link>
         </div>
-        <p className="mt-5 border-t border-line pt-4 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+        <p className="mt-5 border-t border-line pt-4 text-[0.6875rem] text-ink-soft">
           Prefer the phone?{" "}
           <a href={`tel:${site.phone}`} className="text-cobalt hover:text-cobalt-deep">
             {site.phoneDisplay}

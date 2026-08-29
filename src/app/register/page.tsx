@@ -12,8 +12,7 @@ export default function RegisterPage() {
   return (
     <div className="shell grid gap-10 py-14 lg:grid-cols-[1fr_28rem]">
       <div>
-        <p className="label-mono">Register</p>
-        <h1 className="mt-2 max-w-xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+        <h1 className="mt-2 max-w-xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
           Accounts are set up personally. On purpose.
         </h1>
         <p className="mt-4 max-w-xl text-[0.95rem] leading-7 text-ink-soft">

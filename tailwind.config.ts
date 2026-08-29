@@ -18,8 +18,8 @@ const config: Config = {
         "line-dark": "#B9B4A5",
       },
       fontFamily: {
-        display: ["var(--font-archivo)", "system-ui", "sans-serif"],
-        mono: ["var(--font-plex-mono)", "ui-monospace", "monospace"],
+        sans: ["var(--font-montserrat)", "system-ui", "sans-serif"],
+        display: ["var(--font-montserrat)", "system-ui", "sans-serif"],
       },
       maxWidth: {
         shell: "76rem",

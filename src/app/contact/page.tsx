@@ -18,8 +18,7 @@ export default function ContactPage({
     <>
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-14">
-          <p className="label-mono">Contact</p>
-          <h1 className="mt-2 max-w-2xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             Talk to a person who knows the inventory.
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-ink-soft">
@@ -35,7 +34,7 @@ export default function ContactPage({
             <h2 className="label-mono">Direct lines</h2>
             <dl className="mt-4 space-y-4 text-sm">
               <div>
-                <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+                <dt className="text-[0.6875rem] text-ink-soft">
                   Email
                 </dt>
                 <dd className="mt-0.5">
@@ -45,7 +44,7 @@ export default function ContactPage({
                 </dd>
               </div>
               <div>
-                <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+                <dt className="text-[0.6875rem] text-ink-soft">
                   Phone
                 </dt>
                 <dd className="mt-0.5">
@@ -55,7 +54,7 @@ export default function ContactPage({
                 </dd>
               </div>
               <div>
-                <dt className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+                <dt className="text-[0.6875rem] text-ink-soft">
                   Office
                 </dt>
                 <dd className="mt-0.5 leading-6 text-ink-soft">

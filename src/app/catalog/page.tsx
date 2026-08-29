@@ -71,14 +71,11 @@ export default async function CatalogPage({
 
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-10">
-          <p className="label-mono">Open catalog · No account needed</p>
-          <h1 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             Lot catalog
           </h1>
           <p className="mt-3 max-w-2xl text-[0.95rem] leading-7 text-ink-soft">
-            Every listing carries a lot-specific COA and a current SDS. Prices
-            shown are asking prices in CAD; lots marked RFQ are quoted on
-            request.
+            Every listing carries a lot-specific COA and a current SDS. Prices are asking prices in CAD; lots marked RFQ are quoted on request. No account is needed to browse.
           </p>
         </div>
       </div>
@@ -99,7 +96,7 @@ export default async function CatalogPage({
               type="search"
               defaultValue={searchParams.q ?? ""}
               placeholder="e.g. glycerin or 56-81-5"
-              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
             />
           </div>
           <div>
@@ -110,7 +107,7 @@ export default async function CatalogPage({
               id="category"
               name="category"
               defaultValue={searchParams.category ?? ""}
-              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
             >
               <option value="">All</option>
               {(Object.keys(categoryLabels) as Category[]).map((c) => (
@@ -128,7 +125,7 @@ export default async function CatalogPage({
               id="grade"
               name="grade"
               defaultValue={searchParams.grade ?? ""}
-              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
             >
               <option value="">All</option>
               {grades.map((g) => (
@@ -146,7 +143,7 @@ export default async function CatalogPage({
               id="province"
               name="province"
               defaultValue={searchParams.province ?? ""}
-              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
             >
               <option value="">All</option>
               {provinces.map((p) => (
@@ -164,7 +161,7 @@ export default async function CatalogPage({
               id="supplier"
               name="supplier"
               defaultValue={searchParams.supplier ?? ""}
-              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+              className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
             >
               <option value="">All</option>
               {suppliers.map((s) => (
@@ -186,7 +183,7 @@ export default async function CatalogPage({
                 min="0"
                 defaultValue={searchParams.minQty ?? ""}
                 placeholder="kg / L"
-                className="mt-1.5 w-full border border-line bg-paper px-3 py-2 font-mono text-sm focus:border-cobalt focus:outline-none"
+                className="mt-1.5 w-full border border-line bg-paper px-3 py-2 text-sm focus:border-cobalt focus:outline-none"
               />
             </div>
             <button type="submit" className="btn-primary">

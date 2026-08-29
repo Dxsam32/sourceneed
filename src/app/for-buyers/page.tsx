@@ -47,8 +47,7 @@ export default function ForBuyersPage() {
     <>
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-14">
-          <p className="label-mono">For buyers</p>
-          <h1 className="mt-2 max-w-2xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             Check the continent before you check overseas.
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-8 text-ink-soft">
@@ -69,13 +68,13 @@ export default function ForBuyersPage() {
 
       <section aria-labelledby="steps-heading" className="border-b border-line">
         <div className="shell py-14">
-          <h2 id="steps-heading" className="font-display text-2xl font-black tracking-tight">
+          <h2 id="steps-heading" className="font-display text-2xl font-extrabold tracking-tight">
             How buying works
           </h2>
           <ol className="mt-8 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-4">
             {steps.map((s, i) => (
               <li key={s.title} className="bg-paper p-6">
-                <span className="font-mono text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-cobalt">
+                <span className="text-[0.6875rem] font-semibold text-cobalt">
                   Step {String(i + 1).padStart(2, "0")}
                 </span>
                 <h3 className="mt-3 font-display text-base font-bold">{s.title}</h3>
@@ -88,7 +87,7 @@ export default function ForBuyersPage() {
 
       <section aria-labelledby="why-heading" className="border-b border-line">
         <div className="shell py-14">
-          <h2 id="why-heading" className="font-display text-2xl font-black tracking-tight">
+          <h2 id="why-heading" className="font-display text-2xl font-extrabold tracking-tight">
             Why procurement teams use SourceNeed
           </h2>
           <div className="mt-8 grid gap-8 md:grid-cols-3">
@@ -116,7 +115,7 @@ export default function ForBuyersPage() {
 
       <section className="bg-cobalt text-paper">
         <div className="shell flex flex-col items-start gap-6 py-14 lg:flex-row lg:items-center lg:justify-between">
-          <h2 className="font-display text-2xl font-black tracking-tight">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight">
             Can&apos;t find a material? Tell us what you&apos;re sourcing.
           </h2>
           <Link href="/contact" className="btn-secondary !border-paper !text-paper hover:!bg-paper hover:!text-cobalt">

@@ -84,8 +84,7 @@ These Terms were last updated in ${new Date().toLocaleDateString("en-CA", { year
 export default function TermsPage() {
   return (
     <div className="shell max-w-3xl py-14">
-      <p className="label-mono">Legal</p>
-      <h1 className="mt-2 font-display text-3xl font-black tracking-tight sm:text-4xl">
+      <h1 className="mt-2 font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
         Terms &amp; Conditions
       </h1>
       <div className="prose-legal mt-6">

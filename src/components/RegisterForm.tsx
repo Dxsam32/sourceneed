@@ -65,7 +65,7 @@ export default function RegisterForm() {
           {["Buyer", "Seller", "Buyer + Seller"].map((r) => (
             <label
               key={r}
-              className={`cursor-pointer border px-4 py-2 font-mono text-xs font-semibold uppercase tracking-[0.1em] ${
+              className={`cursor-pointer border px-4 py-2 text-xs font-semibold ${
                 role === r
                   ? "border-cobalt bg-cobalt text-paper"
                   : "border-line text-ink-soft hover:border-ink"

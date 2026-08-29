@@ -14,7 +14,7 @@ export default function Footer() {
                 <rect x="1" y="1" width="16" height="16" fill="none" stroke="#F7F5EF" strokeWidth="2" />
                 <rect x="5" y="5" width="8" height="8" fill="#F7F5EF" />
               </svg>
-              <span className="font-display text-lg font-black tracking-tight">SourceNeed</span>
+              <span className="font-display text-lg font-extrabold tracking-tight">SourceNeed</span>
             </span>
           </Link>
           <p className="mt-4 max-w-xs text-sm leading-6 text-paper/70">
@@ -73,7 +73,7 @@ export default function Footer() {
 
       <div className="border-t border-paper/15">
         <div className="shell flex flex-col gap-3 py-5 sm:flex-row sm:items-center sm:justify-between">
-          <p className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-paper/50">
+          <p className="text-[0.6875rem] text-paper/50">
             © {year} {site.legalName} · All rights reserved
           </p>
           <ul className="flex gap-5">
@@ -81,7 +81,7 @@ export default function Footer() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-paper/60 hover:text-paper"
+                  className="text-[0.6875rem] text-paper/60 hover:text-paper"
                 >
                   {item.label}
                 </Link>

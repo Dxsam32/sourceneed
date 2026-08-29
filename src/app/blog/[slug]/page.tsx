@@ -70,15 +70,15 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
       <article>
         <div className="border-b border-line bg-paper-2/50">
           <div className="shell max-w-3xl py-14">
-            <nav aria-label="Breadcrumb" className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+            <nav aria-label="Breadcrumb" className="text-[0.6875rem] text-ink-soft">
               <Link href="/blog" className="hover:text-cobalt">← All articles</Link>
             </nav>
-            <p className="mt-5 font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-ink-soft">
+            <p className="mt-5 text-[0.6875rem] text-ink-soft">
               <time dateTime={a.date}>{dateFmt.format(new Date(a.date))}</time>
               {" · "}
               {a.readingMinutes} min read
             </p>
-            <h1 className="mt-2 font-display text-3xl font-black leading-tight tracking-tight sm:text-4xl">
+            <h1 className="mt-2 font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               {a.title}
             </h1>
           </div>

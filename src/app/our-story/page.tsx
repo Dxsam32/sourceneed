@@ -14,8 +14,7 @@ export default function OurStoryPage() {
     <>
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-14">
-          <p className="label-mono">Our story</p>
-          <h1 className="mt-2 max-w-2xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-2 max-w-2xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             We kept watching the same absurd trade happen.
           </h1>
         </div>
@@ -76,7 +75,7 @@ export default function OurStoryPage() {
 
       <section className="bg-cobalt text-paper">
         <div className="shell flex flex-col items-start gap-6 py-14 lg:flex-row lg:items-center lg:justify-between">
-          <h2 className="font-display text-2xl font-black tracking-tight">
+          <h2 className="font-display text-2xl font-extrabold tracking-tight">
             See what&apos;s on the manifest today.
           </h2>
           <Link href="/catalog" className="btn-secondary !border-paper !text-paper hover:!bg-paper hover:!text-cobalt">

@@ -124,7 +124,7 @@ export default async function ProductPage({
 
       <div className="border-b border-line bg-paper-2/50">
         <div className="shell py-8">
-          <nav aria-label="Breadcrumb" className="font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+          <nav aria-label="Breadcrumb" className="text-[0.6875rem] text-ink-soft">
             <ol className="flex flex-wrap gap-1.5">
               <li>
                 <Link href="/" className="hover:text-cobalt">Home</Link>
@@ -144,11 +144,11 @@ export default async function ProductPage({
             <DocBadge label="SDS available" available={p.sdsAvailable} title="Current safety data sheet" />
             <VerifiedBadge verified={p.supplierVerified} />
           </div>
-          <h1 className="mt-3 max-w-3xl font-display text-3xl font-black tracking-tight sm:text-4xl">
+          <h1 className="mt-3 max-w-3xl font-display text-3xl font-extrabold tracking-tight sm:text-4xl">
             {p.name}
           </h1>
           {p.casNumber && (
-            <p className="mt-2 font-mono text-sm text-ink-soft">CAS {p.casNumber}</p>
+            <p className="mt-2 text-sm text-ink-soft">CAS {p.casNumber}</p>
           )}
         </div>
       </div>
@@ -158,7 +158,7 @@ export default async function ProductPage({
           <section aria-labelledby="spec-heading" className="border border-ink bg-paper">
             <h2
               id="spec-heading"
-              className="border-b border-ink bg-ink px-4 py-2.5 font-mono text-[0.6875rem] font-semibold uppercase tracking-[0.16em] text-paper"
+              className="border-b border-ink bg-ink px-4 py-2.5 text-[0.6875rem] font-semibold text-paper"
             >
               Lot specification
             </h2>
@@ -168,7 +168,7 @@ export default async function ProductPage({
                   key={k}
                   className="grid grid-cols-[9rem_1fr] gap-4 border-b border-line px-4 py-3 last:border-b-0 sm:grid-cols-[12rem_1fr]"
                 >
-                  <dt className="font-mono text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-ink-soft">
+                  <dt className="text-[0.6875rem] font-medium text-ink-soft">
                     {k}
                   </dt>
                   <dd className="text-sm text-ink">{v}</dd>
@@ -218,10 +218,10 @@ export default async function ProductPage({
         <aside className="lg:sticky lg:top-24 lg:self-start">
           <div className="border-2 border-ink bg-paper p-5">
             <p className="label-mono">Asking price</p>
-            <p className="mt-1 font-display text-3xl font-black">
+            <p className="mt-1 font-display text-3xl font-extrabold">
               {formatPrice(p)}
               {p.priceCad !== null && (
-                <span className="ml-2 align-middle font-mono text-xs font-medium uppercase tracking-[0.1em] text-ink-soft">
+                <span className="ml-2 align-middle text-xs font-medium text-ink-soft">
                   CAD
                 </span>
               )}
@@ -241,7 +241,7 @@ export default async function ProductPage({
               Quotes include freight options to your dock, hazmat-compliant
               where required. Typical response within one business day.
             </p>
-            <p className="mt-3 font-mono text-[0.6875rem] uppercase tracking-[0.12em] text-ink-soft">
+            <p className="mt-3 text-[0.6875rem] text-ink-soft">
               Or call{" "}
               <a href={`tel:${site.phone}`} className="text-cobalt hover:text-cobalt-deep">
                 {site.phoneDisplay}
