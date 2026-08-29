@@ -53,3 +53,24 @@ node scripts/seed-supabase.mjs  # push products.json to Supabase
   they become direct downloads automatically.
 - **DNS cutover**: point sourceneed.com at Vercel; all legacy URLs 301 to
   their new equivalents.
+
+## Deployment state (2026-08-29)
+
+Live at **https://sourceneed-prod.vercel.app** (project `sourceneed-prod`,
+team dxsam32s-projects). Because the Vercel MCP connector could only create
+projects (not redeploy them), the project's build command fetches the source
+tarball from GitHub master:
+
+```
+curl -sL https://github.com/Dxsam32/sourceneed/archive/refs/heads/master.tar.gz | tar xz --strip-components=1 && next build
+```
+
+**To do in the Vercel dashboard** (one-time cleanup):
+
+1. Connect the `Dxsam32/sourceneed` GitHub repo to the project in
+   Settings → Git, and clear the custom build command — then every push
+   deploys normally and the repo can go private again.
+2. Delete the dead partial projects: `sourceneed`, `sourceneed-site`,
+   `sourceneed-web`, `sourceneed-live`, `sourceneed-app`.
+3. Add the env vars above so the catalog reads from Supabase.
+4. Add the `sourceneed.com` domain when ready to cut over DNS.
